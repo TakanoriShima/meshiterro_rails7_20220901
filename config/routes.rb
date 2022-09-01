@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root to: 'homes#top'
   # ---- 下記1行を追加してください ---- #
@@ -13,5 +14,8 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+  
+  # ---- 下記1行を追加してください ---- #
+  resources :users, only: [:show, :edit, :update]
 
 end
