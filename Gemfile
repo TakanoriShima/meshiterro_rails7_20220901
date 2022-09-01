@@ -74,3 +74,8 @@ end
 gem 'devise'
 gem 'kaminari','~> 1.2.1'
 gem 'activestorage-validator'
+
+# ---- 以下を追加してください ---- #
+gem 'bootstrap', '~> 4.5'
+gem 'jquery-rails'
+gem 'font-awesome-sass', '~> 5.13'
