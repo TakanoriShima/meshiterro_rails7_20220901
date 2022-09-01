@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
+
   def show
     @user = User.find(params[:id])
-    
-    # ---- 下記1行を追加してください ---- #
     @post_images = @user.post_images.page(params[:page]).reverse_order
   end
   

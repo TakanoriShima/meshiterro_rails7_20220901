@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-  # ---- 以下を追加してください ---- #
   validates :name, presence: true
 
   has_many :post_images, dependent: :destroy
@@ -14,4 +13,5 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   
   has_one_attached :profile_image
+  
 end
