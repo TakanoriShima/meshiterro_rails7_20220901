@@ -1,11 +1,12 @@
 class PostImage < ApplicationRecord
   belongs_to :user
   has_one_attached :image
-  
-  # ---- 下記1行を追加してください ---- #
   has_many :post_comments, dependent: :destroy
-  
   has_many :favorites, dependent: :destroy
+  
+  # ---- 以下を追加してください ---- #
+  validates :shop_name, presence: true
+  validates :image, presence: true, blob: { content_type: :image }
 
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
