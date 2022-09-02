@@ -79,3 +79,9 @@ gem 'activestorage-validator'
 gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.13'
+
+group :production do
+  gem 'unicorn', '~> 6.0'
+    # https://rubygems.org/gems/unicorn | RubyGems
+    # 低遅延・高帯域の接続で高速なクライアントにサービスを提供できる UNIX ライクな HTTP サーバ
+end
