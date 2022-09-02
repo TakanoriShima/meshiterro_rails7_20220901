@@ -85,3 +85,5 @@ group :production do
     # https://rubygems.org/gems/unicorn | RubyGems
     # 低遅延・高帯域の接続で高速なクライアントにサービスを提供できる UNIX ライクな HTTP サーバ
 end
+
+gem 'mini_racer'

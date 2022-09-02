@@ -138,6 +138,7 @@ GEM
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
     kgio (2.11.4)
+    libv8-node (16.10.0.0-x86_64-linux)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -147,6 +148,8 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_racer (0.6.3)
+      libv8-node (~> 16.10.0.0)
     minitest (5.16.3)
     msgpack (1.5.6)
     net-imap (0.2.3)
@@ -281,6 +284,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   kaminari (~> 1.2.1)
+  mini_racer
   puma (~> 5.0)
   rails (~> 7.0.3)
   selenium-webdriver
